@@ -125,3 +125,12 @@ RewriteRule .* http://www.domain.com [R=302,L]
 
 </IfModule>
 ```
+
+> Make all folder permission 755
+```
+chmod 755 xyz-folder-name
+```
+> Make all files permission 644
+```
+find . -iname "*.php" -exec chmod 644 {} \;
+```
