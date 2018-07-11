@@ -125,6 +125,12 @@ RewriteRule .* http://www.domain.com [R=302,L]
 
 </IfModule>
 ```
+> Forword non-http to https
+```
+    RewriteEngine On
+    RewriteCond %{HTTP:X-Forwarded-Proto} !https
+    RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+```
 
 > Make all folder permission 755
 ```
